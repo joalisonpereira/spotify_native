@@ -14,11 +14,11 @@ function Player({ player, currentEpisode, play, pause, next, prev }) {
 
   return (
     <Container>
-      <CoverBackground source={{ uri: currentEpisode.artwork }} />
+      <CoverBackground source={{ uri: currentEpisode && currentEpisode.artwork }} />
 
       <EpisodeInfo>
-        <Title>{currentEpisode.title}</Title>
-        <Author>{currentEpisode.artist}</Author>
+        <Title>{currentEpisode && currentEpisode.title}</Title>
+        <Author>{currentEpisode && currentEpisode.artist}</Author>
       </EpisodeInfo>
 
       <Controls>
